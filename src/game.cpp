@@ -2,10 +2,6 @@
 #include <charconv>
 
 namespace freg {
-    Game::Game() {
-        run();
-    }
-
     Game::~Game() {};
 
     void Game::run() {
@@ -15,23 +11,24 @@ namespace freg {
 
         askMagic();
 
-        PRINT("you chose <" + to_string(magic) + "> as your magic");
+        PRINT("\nyou chose <" + to_string(magic) + "> as your magic");
     
         //create player object with choices made beforehand
         Player* player = new Player(playerName, 10, 5, magic);
-
+        Enemy enemy = Enemy::pickEnemy(3);
 
         delete player;
     }
 
     void Game::askMagic() {
         //print magic shit
-        PRINT("\n\nwhich magic would you like?\n");
+        PRINT("\n\nwhich magic would you like?\n")
         PRINT(" 1 - fire\n")
         PRINT(" 2 - water\n")
         PRINT(" 3 - earth\n")
         PRINT(" 4 - air\n")
         PRINT(" 5 - dinosaur\n")
+        PRINT(" 6 - meteor\n")
         
         //store magic type for user input
         std::cin >> magicChoice;
@@ -43,6 +40,7 @@ namespace freg {
             case 3: magic = EARTH; break;
             case 4: magic = AIR; break;
             case 5: magic = DINOSAUR; break;
+            case 6: magic = METEOR; break;
             default: PRINT("invalid choice. choose numbers corresponding to each magic type"); break;
         };
 

@@ -12,6 +12,7 @@ namespace freg {
         ~Enemy();
 
         std::string getStats() override;
+        static Enemy pickEnemy(const int choice);
 
         private:
         MagicType weakness;

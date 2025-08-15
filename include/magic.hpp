@@ -8,7 +8,8 @@ namespace freg {
         WATER,
         EARTH,
         AIR,
-        DINOSAUR
+        DINOSAUR,
+        METEOR
     };
 
     std::string to_string(MagicType mt);

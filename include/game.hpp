@@ -12,8 +12,9 @@ namespace freg {
         Game();
         ~Game();
 
-        private:
         void run();
+        
+        private:
         void askMagic();
 
         std::string playerName;

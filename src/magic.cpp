@@ -8,6 +8,7 @@ namespace freg {
             case EARTH: return "earth";
             case AIR: return "air";
             case DINOSAUR: return "dinosaur";
+            case METEOR: return "meteor";
             default: return "";
         }
     }

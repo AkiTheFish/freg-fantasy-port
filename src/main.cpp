@@ -5,7 +5,11 @@
 #define PRINT(x) std::cout << x << std::endl;
 
 int main(void) {
-    freg::Game game;
+    freg::Game* game = new freg::Game;
+
+    game->run();
+
+    delete game;
 
     return 0;
 }
