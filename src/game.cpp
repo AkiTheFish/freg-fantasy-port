@@ -14,6 +14,8 @@ namespace freg {
         std::cin >> playerName;
 
         askMagic();
+
+        PRINT("you chose <" + to_string(magic) + "> as your magic");
     
         //create player object with choices made beforehand
         Player* player = new Player(playerName, 10, 5, magic);
