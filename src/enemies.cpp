@@ -6,7 +6,7 @@
 namespace freg {
     Enemy::~Enemy() {};
 
-    static Enemy pickEnemy(const int choice) {
+    Enemy Enemy::pickEnemy(const int choice) {
         //jerry
         std::string jName = "jerry";
         float jHealth = 20;
