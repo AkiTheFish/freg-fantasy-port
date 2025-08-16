@@ -1,5 +1,4 @@
 #include "../include/game.hpp"
-#include <charconv>
 
 namespace freg {
     Game::~Game() {};
@@ -15,8 +14,8 @@ namespace freg {
     
         //create player object with choices made beforehand
         Player* player = new Player(playerName, 10, 5, magic);
-        Enemy enemy = Enemy::pickEnemy(3);
-
+        const Enemy enemy = Enemy::pickEnemy(3);
+        
         delete player;
     }
 

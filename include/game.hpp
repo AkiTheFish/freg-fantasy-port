@@ -9,11 +9,11 @@
 namespace freg {
     class Game {
         public:
-        Game();
+        Game() = default;
         ~Game();
 
         void run();
-        
+
         private:
         void askMagic();
 
